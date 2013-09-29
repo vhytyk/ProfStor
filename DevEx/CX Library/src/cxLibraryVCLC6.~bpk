@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\cb5\cxLibraryVCLC6.bpl"/>
+    <OBJFILES value="..\bin\cb6\cxLibraryVCLC6.obj ..\bin\cb6\cxCustomConverter.obj 
+      ..\bin\cb6\cxGraphics.obj ..\bin\cb6\cxLibraryStrs.obj 
+      ..\bin\cb6\cxLookAndFeelPainters.obj ..\bin\cb6\cxLookAndFeels.obj 
+      ..\bin\cb6\cxPropertiesStore.obj ..\bin\cb6\cxScrollBar.obj 
+      ..\bin\cb6\cxStorage.obj ..\bin\cb6\cxStyles.obj 
+      ..\bin\cb6\cxStyleSheetEditor.obj ..\bin\cb6\cxClasses.obj 
+      ..\bin\cb6\cxContainer.obj ..\bin\cb6\cxControls.obj 
+      ..\bin\cb6\cxConverterUtils.obj"/>
+    <RESFILES value="cxLibraryVCLC6.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) cxStyleSheetEditor.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib vcl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi dxThemeC6.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="cxLibraryVCLC6.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;..\..\XP Theme Manager\bin\cb6&quot;;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=c:\cb6\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b -k- -vi -c -tWM"/>
+    <PFLAGS value="-N2..\bin\cb6 -N0..\bin\cb6 -$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-l&quot;C:\DevEx\CX Library\bin\cb6&quot; -I..\bin\cb6 
+      -D&quot;Express Cross Platform Library (VCL Edition) by Developer Express Inc.&quot; 
+      -aa -Tpp -Gpr -x -Gn -Gl -Gi"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="cxLibraryVCLC6.cpp" FORMNAME="" UNITNAME="cxLibraryVCLC6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxLibraryVCLC6.res" FORMNAME="" UNITNAME="cxLibraryVCLC6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxCustomConverter.pas" FORMNAME="" UNITNAME="cxCustomConverter" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGraphics.pas" FORMNAME="" UNITNAME="cxGraphics" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxLibraryStrs.pas" FORMNAME="" UNITNAME="cxLibraryStrs" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxLookAndFeelPainters.pas" FORMNAME="" UNITNAME="cxLookAndFeelPainters" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxLookAndFeels.pas" FORMNAME="" UNITNAME="cxLookAndFeels" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxPropertiesStore.pas" FORMNAME="" UNITNAME="cxPropertiesStore" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxScrollBar.pas" FORMNAME="" UNITNAME="cxScrollBar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxStorage.pas" FORMNAME="" UNITNAME="cxStorage" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxStyles.pas" FORMNAME="" UNITNAME="cxStyles" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxStyleSheetEditor.pas" FORMNAME="frmcxStyleSheetEditor" UNITNAME="Cxstylesheeteditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxClasses.pas" FORMNAME="" UNITNAME="cxClasses" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxContainer.pas" FORMNAME="" UNITNAME="cxContainer" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxControls.pas" FORMNAME="" UNITNAME="cxControls" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxConverterUtils.pas" FORMNAME="" UNITNAME="cxConverterUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\dxThemeC6.bpi" FORMNAME="" UNITNAME="dxThemeC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=3
+Item0=..\..\XP Theme Manager\bin\cb6;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\..\XP Theme Manager\bin\cb5;$(BCB)\lib\obj;$(BCB)\lib
+Item2=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=..\bin\cb6
+Item1=..\bin\cb5
+
+[HistoryLists\hlFinalOutputDir]
+Count=2
+Item0=..\bin\cb5\
+Item1=..\bin\cb5
+
+[HistoryLists\hIBPIOutputDir]
+Count=3
+Item0=C:\DevEx\CX Library\bin\cb6\
+Item1=C:\DevEx\CX Library\bin\cb5\
+Item2=..\bin\cb5
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

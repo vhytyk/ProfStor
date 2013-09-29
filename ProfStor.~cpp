@@ -1,0 +1,85 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#include "DBLogDlg.hpp"
+#include "UUtiliteFunctions.h"
+#pragma hdrstop
+//---------------------------------------------------------------------------
+USEFORM("MainForm.cpp", TMainForm);
+USEFORM("TovarList.cpp", TovarListForm);
+USEFORM("UFrameList.cpp", FrameList); /* TFrame: File Type */
+USEFORM("TModifyTovarForm.cpp", ModifyTovarForm);
+USEFORM("PartnerList.cpp", PartnerListForm);
+USEFORM("ModifyPartnerForm.cpp", ModifyPartner);
+USEFORM("Document.cpp", DocumentForm);
+USEFORM("Nakladna.cpp", NakladnaForm);
+USEFORM("AktPrihod.cpp", PrihodForm);
+USEFORM("NakladnaList.cpp", NakladnaListForm);
+USEFORM("AktPrihodList.cpp", AktPrihodListForm);
+USEFORM("KassaPrihod.cpp", KassaPrihodForm);
+USEFORM("KassaRashod.cpp", KassaRashodForm);
+USEFORM("Options.cpp", OptionsForm);
+USEFORM("Report.cpp", FormReport);
+USEFORM("KassaList.cpp", KassaFormList);
+USEFORM("GroupsList.cpp", GroupsFormList);
+//---------------------------------------------------------------------------
+WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
+{
+        try
+        {
+           Application->Initialize();
+           try
+           {
+            Init();
+           }catch ( ... )
+           {
+            ShowMessage("Не могу соединится с базой!");
+         //   dxBarButton13Click(0x0);
+           }
+           AnsiString DBName = "Sklad";
+           AnsiString Login;
+           AnsiString Password;
+           bool connected = false;
+           while(LoginDialog(DBName, Login, Password))
+           {
+
+              TIBQuery * q = CreateQuery(Application,
+              "select rights from users where login='"+Login+"'"
+              " and pass = '"+Password+"'"
+              , true);
+              if(q->RecordCount != 1)
+              {
+                  ShowMessage("Неверный логин или пароль");
+              }
+              else
+              {
+                 connected = true;
+                 SetRights((TRights)q->FieldByName("rights")->AsInteger);
+                 break;
+              }
+           }
+           if(connected == false)
+               Application->Terminate();
+           Application->Title = "Проф-Склад [by Vic]";
+           Application->CreateForm(__classid(TTMainForm), &TMainForm);
+       Application->CreateForm(__classid(TGroupsFormList), &GroupsFormList);
+       Application->Run();
+        }
+        catch (Exception &exception)
+        {
+                 Application->ShowException(&exception);
+        }
+        catch (...)
+        {
+                 try
+                 {
+                         throw Exception("");
+                 }
+                 catch (Exception &exception)
+                 {
+                         Application->ShowException(&exception);
+                 }
+        }
+        return 0;
+}
+//---------------------------------------------------------------------------

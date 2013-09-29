@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+USERES("cxADOAdaptersC5.res");
+USEPACKAGE("vcl50.bpi");
+USEUNIT("cxADOAdapters.pas");
+USEPACKAGE("cxDataC5.bpi");
+USEPACKAGE("Vcldb50.bpi");
+USEPACKAGE("vclado50.bpi");
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+//---------------------------------------------------------------------------
+
+//   Package source.
+//---------------------------------------------------------------------------
+
+#pragma argsused
+int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void*)
+{
+	return 1;
+}
+//---------------------------------------------------------------------------

@@ -1,0 +1,141 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "PartnerList.h"
+#include "UUtiliteFunctions.h"
+#include "ModifyPartnerForm.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "UFrameList"
+#pragma link "cxContainer"
+#pragma link "cxControls"
+#pragma link "cxDBEdit"
+#pragma link "cxEdit"
+#pragma link "cxMemo"
+#pragma link "cxTextEdit"
+#pragma link "cxRadioGroup"
+#pragma link "cxContainer"
+#pragma link "cxControls"
+#pragma link "cxDBEdit"
+#pragma link "cxEdit"
+#pragma link "cxMemo"
+#pragma link "cxRadioGroup"
+#pragma link "cxTextEdit"
+#pragma link "UFrameList"
+#pragma resource "*.dfm"
+TPartnerListForm *PartnerListForm;
+//---------------------------------------------------------------------------
+__fastcall TPartnerListForm::TPartnerListForm(TComponent* Owner, TPartnerType pt)
+   : TForm(Owner)
+{
+   FrameList1->Query = CreateQuery(this, "select id_partner, namepartner, saldo, info from Partner", true);
+   Refresh();
+   switch (pt)
+   {
+      case ptPokupec:
+        RadioButtonPokupec->Checked = true;
+        RadioButtonPostach->Enabled = false;
+        RadioButtonRashod->Enabled = false;
+      break;
+      case ptPostach:
+        RadioButtonPostach->Checked = false;
+        RadioButtonPostach->Checked = true;
+        RadioButtonPokupec->Enabled = false;
+        RadioButtonRashod->Enabled = false;
+      break;
+      case ptRashod:
+        RadioButtonPokupec->Enabled = false;
+        RadioButtonPostach->Enabled = false;
+        RadioButtonRashod->Checked = true;
+      break;
+      case ptAll:
+        RadioButtonPostach->Checked = false;
+        RadioButtonPostach->Checked = true;
+      break;
+   }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TPartnerListForm::Refresh()
+{
+   FrameList1->Refresh("id_partner");
+   SetDisplayLabels(FrameList1->Query,
+         FrameList1->GridView1->DataController, "Код   ,Название   , Сальдо, false");
+}
+//---------------------------------------------------------------------------
+TPartner * __fastcall TPartnerListForm::GetSelectedItem()
+{
+   return FSelectedItem;
+}
+//---------------------------------------------------------------------------
+void __fastcall TPartnerListForm::FrameList1GridView1DblClick(
+      TObject *Sender)
+{
+   FSelectedItem = new TPartner(FrameList1->Query->FieldByName("id_partner")->AsInteger);
+   Close();
+}
+//---------------------------------------------------------------------------
+void __fastcall TPartnerListForm::ButtonInsertClick(TObject &Sender)
+{
+   TPartner *p = new TPartner(0);
+   if(RadioButtonPostach->Checked)
+      p->PartnerType = ptPostach;
+   else if(RadioButtonPokupec->Checked)
+      p->PartnerType = ptPokupec;
+   else
+      p->PartnerType = ptRashod;
+   TModifyPartner * ModifyPartner = new TModifyPartner
+               (this, p);
+   ModifyPartner->ShowModal();
+   delete p;
+   Refresh();
+}
+//---------------------------------------------------------------------------
+void __fastcall TPartnerListForm::ButtonModifyClick(TObject &Sender)
+{
+   TModifyPartner * ModifyPartner = new TModifyPartner
+               (this, new TPartner(FrameList1->Query->FieldByName("ID_Partner")->AsInteger));
+   ModifyPartner->ShowModal();
+   delete ModifyPartner;
+   Refresh();
+}
+//---------------------------------------------------------------------------
+void __fastcall TPartnerListForm::ButtonDeleteClick(TObject &Sender)
+{
+   TPartner * p = new TPartner(FrameList1->Query->FieldByName("id_partner")->AsInteger);
+   p->Delete();
+   delete p;
+   Refresh();   
+}
+//---------------------------------------------------------------------------
+void __fastcall TPartnerListForm::RadioButtonPostachClick(TObject *Sender)
+{
+   FrameList1->Query->SQL->Text = "select id_partner, namepartner, saldo, info from Partner where partnertype=1";
+   Refresh();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TPartnerListForm::RadioButtonPokupecClick(TObject *Sender)
+{
+   FrameList1->Query->SQL->Text = "select id_partner, namepartner, saldo, info from Partner where partnertype=2";
+   Refresh();
+}
+//---------------------------------------------------------------------------
+void __fastcall TPartnerListForm::RadioButtonRashodClick(TObject *Sender)
+{
+   FrameList1->Query->SQL->Text = "select id_partner, namepartner, saldo, info from Partner where partnertype=3";
+   Refresh();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TPartnerListForm::RadioButtonDistribClick(TObject *Sender)
+{
+   FrameList1->Query->SQL->Text = "select id_partner, namepartner, saldo, info from Partner where partnertype=4";
+   Refresh();
+}
+//---------------------------------------------------------------------------
+
+

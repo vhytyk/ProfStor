@@ -1,0 +1,60 @@
+//---------------------------------------------------------------------------
+#include "Partner.h"
+#include "cxContainer.hpp"
+#include "cxControls.hpp"
+#include "cxDBEdit.hpp"
+#include "cxEdit.hpp"
+#include "cxMemo.hpp"
+#include "cxRadioGroup.hpp"
+#include "cxTextEdit.hpp"
+#include "UFrameList.h"
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <Forms.hpp>
+#include <StdCtrls.hpp>
+
+#ifndef PartnerListH
+#define PartnerListH
+//---------------------------------------------------------------------------
+#include <Classes.hpp>
+#include <Controls.hpp>
+#include <StdCtrls.hpp>
+#include <Forms.hpp>
+#include "UFrameList.h"
+#include "cxContainer.hpp"
+#include "cxControls.hpp"
+#include "cxDBEdit.hpp"
+#include "cxEdit.hpp"
+#include "cxMemo.hpp"
+#include "cxTextEdit.hpp"
+#include "cxRadioGroup.hpp"
+//---------------------------------------------------------------------------
+class TPartner;
+class TPartnerListForm : public TForm
+{
+__published:	// IDE-managed Components
+   TFrameList *FrameList1;
+   TcxDBMemo *cxDBMemo1;
+   TcxRadioButton *RadioButtonPostach;
+   TcxRadioButton *RadioButtonPokupec;
+   TcxRadioButton *RadioButtonRashod;
+   void __fastcall FrameList1GridView1DblClick(TObject *Sender);
+   void __fastcall ButtonInsertClick(TObject &Sender);
+   void __fastcall ButtonModifyClick(TObject &Sender);
+   void __fastcall ButtonDeleteClick(TObject &Sender);
+   void __fastcall RadioButtonPostachClick(TObject *Sender);
+   void __fastcall RadioButtonPokupecClick(TObject *Sender);
+   void __fastcall RadioButtonRashodClick(TObject *Sender);
+   void __fastcall RadioButtonDistribClick(TObject *Sender);
+private:
+   TPartner * FSelectedItem;
+   TPartner * __fastcall GetSelectedItem();	// User declarations
+public:		// User declarations
+   __fastcall TPartnerListForm(TComponent* Owner, TPartnerType pt);
+   void __fastcall Refresh();
+   __property TPartner * SelectedItem = { read = GetSelectedItem };
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TPartnerListForm *PartnerListForm;
+//---------------------------------------------------------------------------
+#endif

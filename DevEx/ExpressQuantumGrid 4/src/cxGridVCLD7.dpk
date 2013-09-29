@@ -1,0 +1,56 @@
+package cxGridVCLD7;
+
+{$R *.res}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ExpressQuantumGrid 4 (VCL Edition) by Developer Express Inc.'}
+{$RUNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  cxEditorsVCLD7,
+  cxExportVCLD7;
+
+contains
+  cxFilterDialog,
+  cxDBExtLookupComboBox,
+  cxGrid,
+  cxGridBandedTableView,
+  cxGridCardView,
+  cxGridCommon,
+  cxGridCustomTableView,
+  cxGridCustomView,
+  cxGridDBBandedTableView,
+  cxGridDBCardView,
+  cxGridDBDataDefinitions,
+  cxGridDBTableView,
+  cxGridDetailsSite,
+  cxGridLevel,
+  cxGridRows,
+  cxGridTableView,
+  cxGridViewData,
+  cxExportGrid4Link,
+  cxGridStrs,
+  cxGridFilterHelpers;
+
+end.

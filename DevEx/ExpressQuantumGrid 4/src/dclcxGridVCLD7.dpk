@@ -1,0 +1,55 @@
+package dclcxGridVCLD7;
+
+{$R *.res}
+{$R cxGridReg.dcr}
+{$ALIGN 8}
+{$ASSERTIONS OFF}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS OFF}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION ON}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO OFF}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES OFF}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST ON}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DESCRIPTION 'ExpressQuantumGrid 4 (VCL Edition) by Developer Express Inc.'}
+{$DESIGNONLY}
+{$IMPLICITBUILD OFF}
+
+requires
+  rtl,
+  cxGridVCLD7,
+  designide,
+  dclcxLibraryVCLD7,
+  dclcxEditorsVCLD7;
+
+contains
+  cxGridStructureNavigator,
+  cxBandedTableViewEditor,
+  cxCardViewEditor,
+  cxCustomTableViewEditor,
+  cxGridEditor,
+  cxTableViewEditor,
+  cxViewEditor,
+  cxGridReg,
+  cxGridImportDialog,
+  cxDBGridConverter,
+  cxDXGridConverter,
+  cxWWGridConverter,
+  cxGridStyleSheetsPreview,
+  cxGridPredefinedStyles,
+  cxGridViewLayoutEditor,
+  cxGridConverter;
+
+end.

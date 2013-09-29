@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\cb5\dclcxGridVCLC6.bpl"/>
+    <OBJFILES value="..\bin\cb5\dclcxGridVCLC6.obj ..\bin\cb5\cxGridConverter.obj 
+      ..\bin\cb5\cxGridEditor.obj ..\bin\cb5\cxGridImportDialog.obj 
+      ..\bin\cb5\cxGridPredefinedStyles.obj ..\bin\cb5\cxGridReg.obj 
+      ..\bin\cb5\cxGridStructureNavigator.obj 
+      ..\bin\cb5\cxGridStyleSheetsPreview.obj 
+      ..\bin\cb5\cxGridViewLayoutEditor.obj ..\bin\cb5\cxTableViewEditor.obj 
+      ..\bin\cb5\cxViewEditor.obj ..\bin\cb5\cxWWGridConverter.obj 
+      ..\bin\cb5\cxBandedTableViewEditor.obj ..\bin\cb5\cxCardViewEditor.obj 
+      ..\bin\cb5\cxCustomTableViewEditor.obj ..\bin\cb5\cxDBGridConverter.obj 
+      ..\bin\cb5\cxDXGridConverter.obj"/>
+    <RESFILES value="dclcxGridVCLC6.res cxGridReg.dcr"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) cxGridEditor.dfm cxGridImportDialog.dfm 
+      cxGridViewLayoutEditor.dfm cxViewEditor.dfm cxCustomTableViewEditor.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="adortl.lib dsnap.lib webdsnap.lib bdertl.lib inet.lib inetdb.lib vclie.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib vclie.lib inetdb.lib inet.lib bdertl.lib dbrtl.lib 
+      vcldb.lib vclx.lib webdsnap.lib dsnap.lib adortl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi dcldb.bpi dbrtl.bpi vcldb.bpi vclx.bpi cxGridVCLC6.bpi 
+      designide.bpi cxDataC6.bpi dxThemeC6.bpi dclcxEditorsVCLC6.bpi 
+      dclcxLibraryVCLC6.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="dclcxGridVCLC6.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;..\..\XP Theme Manager\bin\cb5&quot;;..\..\ExpressDataController\bin\cb5;&quot;..\..\ExpressEditors Library 4\bin\cb5&quot;;&quot;..\..\cx library\bin\cb5&quot;;..\bin\cb5;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-src_suffix cpp -I$(BCB)\include -I$(BCB)\include\vcl -boa"/>
+    <CFLAG1 value="-O2 -H=c:\cb6\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b -k- -vi -c -tWM"/>
+    <PFLAGS value="-N2..\bin\cb5 -N0..\bin\cb5 -$Y- -$L- -$D- -$A8 -v -JPHNE -M -LUdsnide50 
+      -LUdcldb50"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-l&quot;C:\DevEx\ExpressQuantumGrid 4\bin\cb5\&quot; -I..\bin\cb5 
+      -D&quot;ExpressQuantumGrid 4 (VCL Edition) by Developer Express Inc.&quot; -aa -Tpp 
+      -Gpd -x -Gn -Gl -Gi"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="dclcxGridVCLC6.cpp" FORMNAME="" UNITNAME="dclcxGridVCLC6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dclcxGridVCLC6.res" FORMNAME="" UNITNAME="dclcxGridVCLC6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridConverter.pas" FORMNAME="" UNITNAME="cxGridConverter" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridEditor.pas" FORMNAME="cxGridEditor" UNITNAME="Cxgrideditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridImportDialog.pas" FORMNAME="ImportDialog" UNITNAME="Cxgridimportdialog" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridPredefinedStyles.pas" FORMNAME="" UNITNAME="cxGridPredefinedStyles" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridReg.pas" FORMNAME="" UNITNAME="cxGridReg" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridReg.dcr" FORMNAME="" UNITNAME="cxGridReg" CONTAINERID="DcrTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridStructureNavigator.pas" FORMNAME="" UNITNAME="cxGridStructureNavigator" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridStyleSheetsPreview.pas" FORMNAME="" UNITNAME="cxGridStyleSheetsPreview" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxGridViewLayoutEditor.pas" FORMNAME="cxGridViewLayoutEditor" UNITNAME="Cxgridviewlayouteditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxTableViewEditor.pas" FORMNAME="" UNITNAME="cxTableViewEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxViewEditor.pas" FORMNAME="cxViewEditor" UNITNAME="Cxvieweditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxWWGridConverter.pas" FORMNAME="" UNITNAME="cxWWGridConverter" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxBandedTableViewEditor.pas" FORMNAME="" UNITNAME="cxBandedTableViewEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxCardViewEditor.pas" FORMNAME="" UNITNAME="cxCardViewEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxCustomTableViewEditor.pas" FORMNAME="cxCustomTableViewEditor" UNITNAME="Cxcustomtablevieweditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDBGridConverter.pas" FORMNAME="" UNITNAME="cxDBGridConverter" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDXGridConverter.pas" FORMNAME="" UNITNAME="cxDXGridConverter" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\CX Library\bin\cb6\rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\CX Library\bin\cb6\vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\CX Library\bin\cb6\dcldb.bpi" FORMNAME="" UNITNAME="dcldb" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\CX Library\bin\cb6\dbrtl.bpi" FORMNAME="" UNITNAME="dbrtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\CX Library\bin\cb6\vcldb.bpi" FORMNAME="" UNITNAME="vcldb" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\CX Library\bin\cb6\vclx.bpi" FORMNAME="" UNITNAME="vclx" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\cb6\cxGridVCLC6.bpi" FORMNAME="" UNITNAME="cxGridVCLC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="c:\cb6\Lib\designide.bpi" FORMNAME="" UNITNAME="designide" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\ExpressDataController\bin\cb6\cxDataC6.bpi" FORMNAME="" UNITNAME="cxDataC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\dxThemeC6.bpi" FORMNAME="" UNITNAME="dxThemeC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\ExpressEditors Library 4\bin\cb6\dclcxEditorsVCLC6.bpi" FORMNAME="" UNITNAME="dclcxEditorsVCLC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\CX Library\bin\cb6\dclcxLibraryVCLC6.bpi" FORMNAME="" UNITNAME="dclcxLibraryVCLC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=1
+Item0=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlIntOutputDir]
+Count=1
+Item0=..\bin\cb5
+
+[HistoryLists\hlFinalOutputDir]
+Count=1
+Item0=..\bin\cb5
+
+[HistoryLists\hIBPIOutputDir]
+Count=1
+Item0=..\bin\cb5
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

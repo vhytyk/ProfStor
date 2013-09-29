@@ -1,0 +1,72 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "GroupsList.h"
+#include "Groups.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "UFrameList"
+#pragma resource "*.dfm"
+TGroupsFormList *GroupsFormList;
+//---------------------------------------------------------------------------
+__fastcall TGroupsFormList::TGroupsFormList(TComponent* Owner, bool _selection)
+   : TForm(Owner)
+{
+   selection = _selection;
+   FrameList1->Query = CreateQuery(this,"select id_group, name from groups", true);
+   Refresh();
+}
+//---------------------------------------------------------------------------
+void __fastcall TGroupsFormList::Refresh()
+{
+   FrameList1->Refresh("id_group");
+   SetDisplayLabels(FrameList1->Query,
+         FrameList1->GridView1->DataController, "false, Группа");
+}
+void __fastcall TGroupsFormList::ButtonModifyClick(TObject &Sender)
+{
+   TGroup selectedGroup(FrameList1->Query->FieldByName("id_group")->AsInteger);
+   if(selectedGroup.ID_Group > 0)
+   {
+      selectedGroup.Name = InputBox("Изменение названия группы","Введите название группы", selectedGroup.Name);
+      selectedGroup.Save();
+      Refresh();
+   }
+}
+//---------------------------------------------------------------------------
+TGroup * __fastcall TGroupsFormList::GetSelectedItem()
+{
+   return FSelectedItem;
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TGroupsFormList::FrameList1GridView1DblClick(
+      TObject *Sender)
+{
+   if(selection)
+   {
+      FSelectedItem = new TGroup(FrameList1->Query->FieldByName("id_group")->AsInteger);
+      Close();
+   }   
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TGroupsFormList::ButtonInsertClick(TObject &Sender)
+{
+   TGroup selectedGroup(0);
+   selectedGroup.Name = InputBox("Новая группа","Введите название группы", selectedGroup.Name);
+   selectedGroup.Save();
+   Refresh();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TGroupsFormList::ButtonDeleteClick(TObject &Sender)
+{
+   DeleteFromTable("Groups",FrameList1->Query->FieldByName("id_group")->AsInteger,true,"id_group");
+   Refresh();
+}
+//---------------------------------------------------------------------------
+

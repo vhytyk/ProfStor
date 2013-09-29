@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\cb6\cxEditorsVCLC6.bpl"/>
+    <OBJFILES value="..\bin\cb6\cxEditorsVCLC6.obj ..\bin\cb6\cxEditPaintUtils.obj 
+      ..\bin\cb6\cxEditRegisteredRepositoryItems.obj 
+      ..\bin\cb6\cxEditTextUtils.obj ..\bin\cb6\cxEditUtils.obj 
+      ..\bin\cb6\cxFormats.obj ..\bin\cb6\cxHyperLinkEdit.obj 
+      ..\bin\cb6\cxImage.obj ..\bin\cb6\cxImageComboBox.obj 
+      ..\bin\cb6\cxLookupDBGrid.obj ..\bin\cb6\cxLookupEdit.obj 
+      ..\bin\cb6\cxLookupGrid.obj ..\bin\cb6\cxMaskEdit.obj 
+      ..\bin\cb6\cxMemo.obj ..\bin\cb6\cxMRUEdit.obj ..\bin\cb6\cxNavigator.obj 
+      ..\bin\cb6\cxRegExpr.obj ..\bin\cb6\cxSpinEdit.obj 
+      ..\bin\cb6\cxTimeEdit.obj ..\bin\cb6\cxBlobEdit.obj 
+      ..\bin\cb6\cxButtonEdit.obj ..\bin\cb6\cxButtons.obj ..\bin\cb6\cxCalc.obj 
+      ..\bin\cb6\cxCalendar.obj ..\bin\cb6\cxCheckBox.obj 
+      ..\bin\cb6\cxCurrencyEdit.obj ..\bin\cb6\cxDateUtils.obj 
+      ..\bin\cb6\cxDBEdit.obj ..\bin\cb6\cxDBEditRepository.obj 
+      ..\bin\cb6\cxDBLookupEdit.obj ..\bin\cb6\cxDropDownEdit.obj 
+      ..\bin\cb6\cxEdit.obj ..\bin\cb6\cxEditConsts.obj 
+      ..\bin\cb6\cxEditDataRegisteredRepositoryItems.obj 
+      ..\bin\cb6\cxEditDBRegisteredRepositoryItems.obj 
+      ..\bin\cb6\cxPropertiesConverters.obj ..\bin\cb6\cxRadioGroup.obj 
+      ..\bin\cb6\cxStandardMask.obj ..\bin\cb6\cxTextEdit.obj 
+      ..\bin\cb6\cxDBFilterControl.obj ..\bin\cb6\cxDBLookupComboBox.obj 
+      ..\bin\cb6\cxDBNavigator.obj ..\bin\cb6\cxEditMaskEditor.obj 
+      ..\bin\cb6\cxExtEditRepositoryItems.obj ..\bin\cb6\cxFilterControl.obj 
+      ..\bin\cb6\cxFilterControlDialog.obj ..\bin\cb6\cxFilterControlStrs.obj 
+      ..\bin\cb6\cxFilterControlUtils.obj ..\bin\cb6\cxListBox.obj"/>
+    <RESFILES value="cxEditorsVCLC6.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi dbrtl.bpi vcldb.bpi vcljpg.bpi cxDataC6.bpi 
+      cxLibraryVCLC6.bpi dxThemeC6.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="cxEditorsVCLC6.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="&quot;..\..\CX Library\bin\cb6&quot;;..\..\expressdatacontroller\bin\cb6;&quot;..\..\xp theme manager\bin\cb6&quot;;..\bin\cb6;$(BCB)\lib\obj;$(BCB)\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=c:\cb6\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b -k- -vi -c -tWM"/>
+    <PFLAGS value="-N2..\bin\cb6 -N0..\bin\cb6 -$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-l&quot;C:\DevEx\ExpressEditors Library 4\bin\cb6&quot; -I..\bin\cb6 
+      -D&quot;ExpressEditors Library 4 (VCL Edition) by Developer Express Inc.&quot; -aa 
+      -Tpp -Gpr -x -Gn -Gl -Gi"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="cxEditorsVCLC6.cpp" FORMNAME="" UNITNAME="cxEditorsVCLC6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditorsVCLC6.res" FORMNAME="" UNITNAME="cxEditorsVCLC6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditPaintUtils.pas" FORMNAME="" UNITNAME="cxEditPaintUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditRegisteredRepositoryItems.pas" FORMNAME="" UNITNAME="cxEditRegisteredRepositoryItems" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditTextUtils.pas" FORMNAME="" UNITNAME="cxEditTextUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditUtils.pas" FORMNAME="" UNITNAME="cxEditUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxFormats.pas" FORMNAME="" UNITNAME="cxFormats" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxHyperLinkEdit.pas" FORMNAME="" UNITNAME="cxHyperLinkEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxImage.pas" FORMNAME="" UNITNAME="cxImage" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxImageComboBox.pas" FORMNAME="" UNITNAME="cxImageComboBox" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxLookupDBGrid.pas" FORMNAME="" UNITNAME="cxLookupDBGrid" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxLookupEdit.pas" FORMNAME="" UNITNAME="cxLookupEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxLookupGrid.pas" FORMNAME="" UNITNAME="cxLookupGrid" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxMaskEdit.pas" FORMNAME="" UNITNAME="cxMaskEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxMemo.pas" FORMNAME="" UNITNAME="cxMemo" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxMRUEdit.pas" FORMNAME="" UNITNAME="cxMRUEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxNavigator.pas" FORMNAME="" UNITNAME="cxNavigator" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxRegExpr.pas" FORMNAME="" UNITNAME="cxRegExpr" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxSpinEdit.pas" FORMNAME="" UNITNAME="cxSpinEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxTimeEdit.pas" FORMNAME="" UNITNAME="cxTimeEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxBlobEdit.pas" FORMNAME="" UNITNAME="cxBlobEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxButtonEdit.pas" FORMNAME="" UNITNAME="cxButtonEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxButtons.pas" FORMNAME="" UNITNAME="cxButtons" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxCalc.pas" FORMNAME="" UNITNAME="cxCalc" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxCalendar.pas" FORMNAME="" UNITNAME="cxCalendar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxCheckBox.pas" FORMNAME="" UNITNAME="cxCheckBox" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxCurrencyEdit.pas" FORMNAME="" UNITNAME="cxCurrencyEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDateUtils.pas" FORMNAME="" UNITNAME="cxDateUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDBEdit.pas" FORMNAME="" UNITNAME="cxDBEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDBEditRepository.pas" FORMNAME="" UNITNAME="cxDBEditRepository" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDBLookupEdit.pas" FORMNAME="" UNITNAME="cxDBLookupEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDropDownEdit.pas" FORMNAME="" UNITNAME="cxDropDownEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEdit.pas" FORMNAME="" UNITNAME="cxEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditConsts.pas" FORMNAME="" UNITNAME="cxEditConsts" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditDataRegisteredRepositoryItems.pas" FORMNAME="" UNITNAME="cxEditDataRegisteredRepositoryItems" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditDBRegisteredRepositoryItems.pas" FORMNAME="" UNITNAME="cxEditDBRegisteredRepositoryItems" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxPropertiesConverters.pas" FORMNAME="" UNITNAME="cxPropertiesConverters" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxRadioGroup.pas" FORMNAME="" UNITNAME="cxRadioGroup" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxStandardMask.pas" FORMNAME="" UNITNAME="cxStandardMask" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxTextEdit.pas" FORMNAME="" UNITNAME="cxTextEdit" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDBFilterControl.pas" FORMNAME="" UNITNAME="cxDBFilterControl" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDBLookupComboBox.pas" FORMNAME="" UNITNAME="cxDBLookupComboBox" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxDBNavigator.pas" FORMNAME="" UNITNAME="cxDBNavigator" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxEditMaskEditor.pas" FORMNAME="" UNITNAME="cxEditMaskEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxExtEditRepositoryItems.pas" FORMNAME="" UNITNAME="cxExtEditRepositoryItems" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxFilterControl.pas" FORMNAME="" UNITNAME="cxFilterControl" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxFilterControlDialog.pas" FORMNAME="" UNITNAME="cxFilterControlDialog" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxFilterControlStrs.pas" FORMNAME="" UNITNAME="cxFilterControlStrs" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxFilterControlUtils.pas" FORMNAME="" UNITNAME="cxFilterControlUtils" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxListBox.pas" FORMNAME="" UNITNAME="cxListBox" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\dbrtl.bpi" FORMNAME="" UNITNAME="dbrtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\vcldb.bpi" FORMNAME="" UNITNAME="vcldb" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\vcljpg.bpi" FORMNAME="" UNITNAME="vcljpg" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\ExpressDataController\bin\cb6\cxDataC6.bpi" FORMNAME="" UNITNAME="cxDataC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\CX Library\bin\cb6\cxLibraryVCLC6.bpi" FORMNAME="" UNITNAME="cxLibraryVCLC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\XP Theme Manager\bin\cb6\dxThemeC6.bpi" FORMNAME="" UNITNAME="dxThemeC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=4
+Item0=..\..\CX Library\bin\cb6;..\..\expressdatacontroller\bin\cb6;..\..\xp theme manager\bin\cb6;..\bin\cb6;$(BCB)\lib\obj;$(BCB)\lib
+Item1=..\..\CX Library\bin\cb5;..\..\expressdatacontroller\bin\cb5;..\..\xp theme manager\bin\cb5;..\bin\cb5;$(BCB)\lib\obj;$(BCB)\lib
+Item2=..\..\CX Library\bin\cb5;..\..\expressdatacontroller\bin\cb5;..\..\xp theme manager\bin\cb5;$(BCB)\lib\obj;$(BCB)\lib
+Item3=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=..\bin\cb6
+Item1=..\bin\cb5
+
+[HistoryLists\hlFinalOutputDir]
+Count=3
+Item0=..\bin\cb6\
+Item1=..\bin\cb5\
+Item2=..\bin\cb5
+
+[HistoryLists\hIBPIOutputDir]
+Count=3
+Item0=C:\DevEx\ExpressEditors Library 4\bin\cb6\
+Item1=C:\DevEx\ExpressEditors Library 4\bin\cb5\
+Item2=..\bin\cb5
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

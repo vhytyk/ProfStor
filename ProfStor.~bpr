@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="ProfStor.exe"/>
+    <OBJFILES value="ProfStor.obj MainForm.obj TovarList.obj UFrameList.obj 
+      UUtiliteFunctions.obj TTovar.obj TModifyTovarForm.obj Partner.obj 
+      PartnerList.obj ModifyPartnerForm.obj Prihod.obj Rashod.obj DocRashod.obj 
+      DocPrihod.obj Document.obj Nakladna.obj AktPrihod.obj NakladnaList.obj 
+      AktPrihodList.obj Kassa.obj KassaPrihod.obj KassaRashod.obj Options.obj 
+      SumaPropysom.obj Report.obj FReport.obj KassaList.obj Groups.obj 
+      GroupsList.obj"/>
+    <RESFILES value="ProfStor.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES) MainForm.dfm TovarList.dfm UFrameList.dfm TModifyTovarForm.dfm 
+      PartnerList.dfm ModifyPartnerForm.dfm Document.dfm Nakladna.dfm 
+      AktPrihod.dfm NakladnaList.dfm AktPrihodList.dfm KassaPrihod.dfm 
+      KassaRashod.dfm Options.dfm Report.dfm KassaList.dfm GroupsList.dfm"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="vcldbx.lib tee.lib fr6.lib vclx.lib cxExtEditorsVCLC6.lib dxComnC6.lib 
+      dxBarC6.lib cxExportVCLC6.lib cxGridVCLC6.lib cxDataC6.lib 
+      cxEditorsVCLC6.lib dxThemeC6.lib cxLibraryVCLC6.lib dbexpress.lib 
+      dsnap.lib cds.lib ibxpress.lib vcldb.lib bdertl.lib dbrtl.lib rtl.lib vcl.lib"/>
+    <SPARELIBS value="vcl.lib rtl.lib dbrtl.lib bdertl.lib vcldb.lib ibxpress.lib cds.lib 
+      dsnap.lib dbexpress.lib cxLibraryVCLC6.lib dxThemeC6.lib 
+      cxEditorsVCLC6.lib cxDataC6.lib cxGridVCLC6.lib cxExportVCLC6.lib 
+      dxBarC6.lib dxComnC6.lib cxExtEditorsVCLC6.lib vclx.lib fr6.lib tee.lib 
+      vcldbx.lib"/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="NO_STRICT"/>
+    <MAINSOURCE value="ProfStor.cpp"/>
+    <INCLUDEPATH value="$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;$(ftReport)\source;&quot;C:\Program Files (x86)\FastReports\FastReport\source&quot;"/>
+    <LIBPATH value="$(BCB)\Projects\Lib;$(BCB)\Projects;$(BCB)\lib\obj;$(BCB)\lib;$(ftReport)\source"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\Projects -I$(BCB)\include -I$(BCB)\include\vcl 
+      -I$(ftReport)\source 
+      -I&quot;C:\Program Files (x86)\FastReports\FastReport\source&quot; -src_suffix cpp 
+      -boa"/>
+    <CFLAG1 value="-O2 -H=$(BCB)\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b- -k- -vi -c -tW -tWM"/>
+    <PFLAGS value="-$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-D&quot;&quot; -aa -Tpe -x -Gn"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0w32.obj sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mt.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="ProfStor.res" FORMNAME="" UNITNAME="ProfStor.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ProfStor.cpp" FORMNAME="" UNITNAME="ProfStor" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="MainForm.cpp" FORMNAME="TMainForm" UNITNAME="MainForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TovarList.cpp" FORMNAME="TovarListForm" UNITNAME="TovarList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="UFrameList.cpp" FORMNAME="FrameList" UNITNAME="UFrameList" CONTAINERID="CCompiler" DESIGNCLASS="TFrame" LOCALCOMMAND=""/>
+      <FILE FILENAME="UUtiliteFunctions.cpp" FORMNAME="" UNITNAME="UUtiliteFunctions" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TTovar.cpp" FORMNAME="" UNITNAME="TTovar" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="TModifyTovarForm.cpp" FORMNAME="ModifyTovarForm" UNITNAME="TModifyTovarForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Partner.cpp" FORMNAME="" UNITNAME="Partner" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PartnerList.cpp" FORMNAME="PartnerListForm" UNITNAME="PartnerList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="ModifyPartnerForm.cpp" FORMNAME="ModifyPartner" UNITNAME="ModifyPartnerForm" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Prihod.cpp" FORMNAME="" UNITNAME="Prihod" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Rashod.cpp" FORMNAME="" UNITNAME="Rashod" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DocRashod.cpp" FORMNAME="" UNITNAME="DocRashod" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="DocPrihod.cpp" FORMNAME="" UNITNAME="DocPrihod" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Document.cpp" FORMNAME="DocumentForm" UNITNAME="Document" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Nakladna.cpp" FORMNAME="NakladnaForm" UNITNAME="Nakladna" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AktPrihod.cpp" FORMNAME="PrihodForm" UNITNAME="AktPrihod" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="NakladnaList.cpp" FORMNAME="NakladnaListForm" UNITNAME="NakladnaList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="AktPrihodList.cpp" FORMNAME="AktPrihodListForm" UNITNAME="AktPrihodList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Kassa.cpp" FORMNAME="" UNITNAME="Kassa" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="KassaPrihod.cpp" FORMNAME="KassaPrihodForm" UNITNAME="KassaPrihod" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="KassaRashod.cpp" FORMNAME="KassaRashodForm" UNITNAME="KassaRashod" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Options.cpp" FORMNAME="OptionsForm" UNITNAME="Options" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="SumaPropysom.cpp" FORMNAME="" UNITNAME="SumaPropysom" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Report.cpp" FORMNAME="FormReport" UNITNAME="Report" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="FReport.cpp" FORMNAME="" UNITNAME="FReport" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="KassaList.cpp" FORMNAME="KassaFormList" UNITNAME="KassaList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="Groups.cpp" FORMNAME="" UNITNAME="Groups" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="GroupsList.cpp" FORMNAME="GroupsFormList" UNITNAME="GroupsList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1058
+CodePage=1251
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+C:\Program Files (x86)\Borland\CBuilder6\Bin\dxThemeC6.bpl=Express XP Theme Manager by Developer Express Inc.
+C:\Program Files (x86)\Borland\CBuilder6\Bin\dxBarC6.bpl=ExpressBars by Developer Express Inc.
+C:\Program Files (x86)\Borland\CBuilder6\Bin\dxComnC6.bpl=ExpressCommonLibrary by Developer Express Inc.
+C:\Program Files (x86)\Borland\CBuilder6\Bin\dxBarDBNavC6.bpl=ExpressBars DBNavigator by Developer Express Inc.
+C:\Program Files (x86)\Borland\CBuilder6\Bin\dxBarExtDBItemsC6.bpl=ExpressBars extended DB items by Developer Express Inc.
+C:\Program Files (x86)\Borland\CBuilder6\Bin\dxBarExtItemsC6.bpl=ExpressBars extended items by Developer Express Inc.
+C:\Windows\SYSTEM32\FS6.bpl=FastScript 1.9 Components
+C:\Windows\SYSTEM32\FSDB6.bpl=FastScript 1.9 DB Components
+C:\Windows\SYSTEM32\FSADO6.bpl=FastScript 1.9 ADO Components
+C:\Windows\SYSTEM32\FSBDE6.bpl=FastScript 1.9 BDE Components
+C:\Windows\SYSTEM32\FSIBX6.bpl=FastScript 1.9 IBX Components
+C:\Windows\SYSTEM32\FSTee6.bpl=FastScript 1.9 Tee Components
+C:\Windows\SYSTEM32\frxe6.bpl=FastReport 4.0 Exports
+C:\Program Files (x86)\FastReports\FastReport 4\LibBCB6\frxDBX6.bpl=FastReport 4.0 DBX Components
+C:\Program Files (x86)\FastReports\FastReport 4\LibBCB6\frxIBX6.bpl=FastReport 4.0 IBX Components
+C:\Program Files (x86)\FastReports\FastReport 4\LibBCB6\frxTee6.bpl=FastReport 4.0 Tee Components
+
+[HistoryLists\hlIncludePath]
+Count=6
+Item0=$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;$(ftReport)\source;C:\Program Files (x86)\FastReports\FastReport\source
+Item1=$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;$(ftReport)\source
+Item2=$(BCB)\Projects;$(BCB)\include;$(BCB)\include\vcl;$(frReport)\source
+Item3=$(BCB)\Projects;..;$(BCB)\include;$(BCB)\include\vcl;$(frReport)\source
+Item4=$(BCB)\Projects;E:\Program Files\Borland\CBuilder6\Projects;..;ProfStor;$(BCB)\include;$(BCB)\include\vcl;$(ftRep)\source
+Item5=$(BCB)\Projects;E:\Program Files\Borland\CBuilder6\Projects;..;ProfStor;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=7
+Item0=$(BCB)\Projects\Lib;$(BCB)\Projects;$(BCB)\lib\obj;$(BCB)\lib;$(ftReport)\source
+Item1=$(BCB)\Projects\Lib;$(BCB)\Projects;$(BCB)\lib\obj;$(BCB)\lib;$(frReport)\source
+Item2=$(BCB)\Projects\Lib;$(BCB)\Projects;..;$(BCB)\lib\obj;$(BCB)\lib;$(frReport)\source
+Item3=$(BCB)\Projects\Lib;$(BCB)\Projects;..;$(BCB)\lib\obj;$(BCB)\lib
+Item4=$(BCB)\Projects\Lib;$(BCB)\Projects;..;$(BCB)\lib\obj;$(BCB)\lib;E:\Program Files\Borland\CBuilder6\Projects
+Item5=$(BCB)\Projects\Lib;$(BCB)\Projects;E:\Program Files\Borland\CBuilder6\Projects;..;ProfStor;$(BCB)\lib\obj;$(BCB)\lib;$(ftRep)\source
+Item6=$(BCB)\Projects\Lib;$(BCB)\Projects;E:\Program Files\Borland\CBuilder6\Projects;..;ProfStor;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

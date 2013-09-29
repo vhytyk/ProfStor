@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\cb6\dxNavBarC6.bpl"/>
+    <OBJFILES value="..\bin\cb6\dxNavBarC6.obj ..\bin\cb6\dxNavBarGraphics.obj 
+      ..\bin\cb6\dxNavBarOfficeViews.obj ..\bin\cb6\dxNavBarStyles.obj 
+      ..\bin\cb6\dxNavBarViewsFact.obj ..\bin\cb6\dxNavBarVSToolBoxViews.obj 
+      ..\bin\cb6\dxNavBarXPViews.obj ..\bin\cb6\dxNavBar.obj 
+      ..\bin\cb6\dxNavBarBase.obj ..\bin\cb6\dxNavBarBaseViews.obj 
+      ..\bin\cb6\dxNavBarCollns.obj ..\bin\cb6\dxNavBarConsts.obj 
+      ..\bin\cb6\dxNavBarExplorerViews.obj"/>
+    <RESFILES value="dxNavBarC6.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value="adortl.lib dsnap.lib webdsnap.lib vclx.lib vcldb.lib dbrtl.lib bdertl.lib 
+      inet.lib inetdb.lib vclie.lib"/>
+    <SPARELIBS value="rtl.lib vcl.lib vclie.lib inetdb.lib inet.lib bdertl.lib dbrtl.lib 
+      vcldb.lib vclx.lib webdsnap.lib dsnap.lib adortl.lib"/>
+    <PACKAGES value="dxThemeC5.bpi dxGDIPlusC5.bpi rtl.bpi vcl.bpi vcljpg.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="dxNavBarC6.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="$(BCB)\lib\obj;$(BCB)\lib;&quot;..\..\ExpressGDI+ Library\bin\cb6&quot;;&quot;..\..\XP Theme Manager\bin\cb6&quot;"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=c:\cb6\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b -k- -vi -c -tWM"/>
+    <PFLAGS value="-N2..\bin\cb6 -N0..\bin\cb6 -$Y- -$L- -$D- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-l..\bin\cb6 -I..\bin\cb6 -D&quot;ExpressNavBar by Developer Express Inc.&quot; -aa 
+      -Tpp -Gpr -x -Gn -Gl -Gi"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="dxNavBarC6.cpp" FORMNAME="" UNITNAME="dxNavBarC6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarC6.res" FORMNAME="" UNITNAME="dxNavBarC6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarGraphics.pas" FORMNAME="" UNITNAME="dxNavBarGraphics" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarOfficeViews.pas" FORMNAME="" UNITNAME="dxNavBarOfficeViews" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarStyles.pas" FORMNAME="" UNITNAME="dxNavBarStyles" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarViewsFact.pas" FORMNAME="" UNITNAME="dxNavBarViewsFact" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarVSToolBoxViews.pas" FORMNAME="" UNITNAME="dxNavBarVSToolBoxViews" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarXPViews.pas" FORMNAME="" UNITNAME="dxNavBarXPViews" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBar.pas" FORMNAME="" UNITNAME="dxNavBar" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarBase.pas" FORMNAME="" UNITNAME="dxNavBarBase" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarBaseViews.pas" FORMNAME="" UNITNAME="dxNavBarBaseViews" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarCollns.pas" FORMNAME="" UNITNAME="dxNavBarCollns" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarConsts.pas" FORMNAME="" UNITNAME="dxNavBarConsts" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxNavBarExplorerViews.pas" FORMNAME="" UNITNAME="dxNavBarExplorerViews" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxThemeC5.bpi" FORMNAME="" UNITNAME="dxThemeC5" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dxGDIPlusC5.bpi" FORMNAME="" UNITNAME="dxGDIPlusC5" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="vcljpg.bpi" FORMNAME="" UNITNAME="vcljpg" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=4
+Item0=$(BCB)\lib\obj;$(BCB)\lib;..\..\ExpressGDI+ Library\bin\cb6;..\..\XP Theme Manager\bin\cb6
+Item1=$(BCB)\lib\obj;$(BCB)\lib;..\..\ExpressGDI+ Library\bin\cb5;..\..\XP Theme Manager\bin\cb5
+Item2=$(BCB)\lib\obj;$(BCB)\lib;C:\DevEx\ExpressGDI+ Library\bin\cb5;C:\DevEx\XP Theme Manager\bin\cb5
+Item3=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=..\bin\cb6
+Item1=..\bin\cb5
+
+[HistoryLists\hlFinalOutputDir]
+Count=3
+Item0=..\bin\cb6\
+Item1=..\bin\cb5\
+Item2=..\bin\cb5
+
+[HistoryLists\hIBPIOutputDir]
+Count=3
+Item0=..\bin\cb6\
+Item1=C:\DevEx\ExpressNavBar\bin\cb5\
+Item2=..\bin\cb5
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

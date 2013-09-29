@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="..\bin\cb6\dclcxExtEditorsVCLC6.bpl"/>
+    <OBJFILES value="..\bin\cb6\dclcxExtEditorsVCLC6.obj ..\bin\cb6\cxSplitterEditor.obj 
+      ..\bin\cb6\cxExtEditReg.obj ..\bin\cb6\cxHintEditor.obj 
+      ..\bin\cb6\cxShellEditorsReg.obj ..\bin\cb6\cxShellEditRepositoryItems.obj"/>
+    <RESFILES value="dclcxExtEditorsVCLC6.res cxExtEditReg.dcr"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value="rtl.lib"/>
+    <PACKAGES value="rtl.bpi vcl.bpi dcldb.bpi dbrtl.bpi vcldb.bpi vclx.bpi designide.bpi 
+      dclcxLibraryVCLC6.bpi dclcxEditorsVCLC6.bpi cxEditorsVCLC6.bpi 
+      cxExtEditorsVCLC6.bpi"/>
+    <PATHCPP value=".;"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value=""/>
+    <SYSDEFINES value="_RTLDLL;NO_STRICT;USEPACKAGES"/>
+    <MAINSOURCE value="dclcxExtEditorsVCLC6.cpp"/>
+    <INCLUDEPATH value="$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\bin\cb6;$(BCB)\lib\obj;$(BCB)\lib;&quot;..\..\CX Library\bin\cb6&quot;;&quot;..\..\XP Theme Manager\bin\cb6&quot;;..\..\ExpressDataController\bin\cb6"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I$(BCB)\include -I$(BCB)\include\vcl -src_suffix cpp -boa"/>
+    <CFLAG1 value="-O2 -H=c:\cb6\lib\vcl60.csm -Hc -Vx -Ve -X- -a8 -b -k- -vi -c -tWM"/>
+    <PFLAGS value="-N2..\bin\cb6 -N0..\bin\cb6 -$Y- -$L- -$D- -$A8 -v -JPHNE -M -LUdesignide 
+      -LUdcldb"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zn"/>
+    <LFLAGS value="-l&quot;C:\DevEx\ExpressEditors Library 4\bin\cb6&quot; -I..\bin\cb6 
+      -D&quot;ExpressExtendedEditors Library 4 (VCL Edition) by Developer Express Inc.&quot; 
+      -aa -Tpp -Gpd -x -Gn -Gl -Gi"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0pkg32.obj $(PACKAGES) Memmgr.Lib sysinit.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cp32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="dclcxExtEditorsVCLC6.cpp" FORMNAME="" UNITNAME="dclcxExtEditorsVCLC6" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="dclcxExtEditorsVCLC6.res" FORMNAME="" UNITNAME="dclcxExtEditorsVCLC6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxSplitterEditor.pas" FORMNAME="" UNITNAME="cxSplitterEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxExtEditReg.pas" FORMNAME="" UNITNAME="cxExtEditReg" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxExtEditReg.dcr" FORMNAME="" UNITNAME="cxExtEditReg" CONTAINERID="DcrTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxHintEditor.pas" FORMNAME="" UNITNAME="cxHintEditor" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxShellEditorsReg.pas" FORMNAME="" UNITNAME="cxShellEditorsReg" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="cxShellEditRepositoryItems.pas" FORMNAME="" UNITNAME="cxShellEditRepositoryItems" CONTAINERID="PascalCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\rtl.bpi" FORMNAME="" UNITNAME="rtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\vcl.bpi" FORMNAME="" UNITNAME="vcl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\dcldb.bpi" FORMNAME="" UNITNAME="dcldb" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\dbrtl.bpi" FORMNAME="" UNITNAME="dbrtl" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\vcldb.bpi" FORMNAME="" UNITNAME="vcldb" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\vclx.bpi" FORMNAME="" UNITNAME="vclx" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="c:\cb6\Lib\designide.bpi" FORMNAME="" UNITNAME="designide" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\CX Library\bin\cb6\dclcxLibraryVCLC6.bpi" FORMNAME="" UNITNAME="dclcxLibraryVCLC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\dclcxEditorsVCLC6.bpi" FORMNAME="" UNITNAME="dclcxEditorsVCLC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\cxEditorsVCLC6.bpi" FORMNAME="" UNITNAME="cxEditorsVCLC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\bin\bin\cb6\cxExtEditorsVCLC6.bpi" FORMNAME="" UNITNAME="cxExtEditorsVCLC6" CONTAINERID="BPITool" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=1
+Item0=$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=4
+Item0=..\bin\cb6;$(BCB)\lib\obj;$(BCB)\lib;..\..\CX Library\bin\cb6;..\..\XP Theme Manager\bin\cb6;..\..\ExpressDataController\bin\cb6
+Item1=..\bin\cb5;$(BCB)\lib\obj;$(BCB)\lib;..\..\CX Library\bin\cb5;..\..\XP Theme Manager\bin\cb5;..\..\ExpressDataController\bin\cb5
+Item2=..\bin\cb5;$(BCB)\lib\obj;$(BCB)\lib
+Item3=$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=..\bin\cb6
+Item1=..\bin\cb5
+
+[HistoryLists\hlFinalOutputDir]
+Count=3
+Item0=..\bin\cb6\
+Item1=..\bin\cb5\
+Item2=..\bin\cb5
+
+[HistoryLists\hIBPIOutputDir]
+Count=3
+Item0=C:\DevEx\ExpressEditors Library 4\bin\cb6\
+Item1=C:\DevEx\ExpressEditors Library 4\bin\cb5\
+Item2=..\bin\cb5
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[CORBA]
+AddServerUnit=1
+AddClientUnit=1
+PrecompiledHeaders=1
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

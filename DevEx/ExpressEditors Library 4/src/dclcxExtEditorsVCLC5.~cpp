@@ -1,0 +1,32 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+USERES("dclcxExtEditorsVCLC5.res");
+USEPACKAGE("vcl50.bpi");
+USEUNIT("cxSplitterEditor.pas");
+USEUNIT("cxExtEditReg.pas");
+USERES("cxExtEditReg.dcr");
+USEUNIT("cxHintEditor.pas");
+USEUNIT("cxShellEditorsReg.pas");
+USEUNIT("cxShellEditRepositoryItems.pas");
+USEPACKAGE("cxExtEditorsVCLC5.bpi");
+USEPACKAGE("dsnide50.bpi");
+USEPACKAGE("dcldb50.bpi");
+USEPACKAGE("Vcldb50.bpi");
+USEPACKAGE("Vclx50.bpi");
+USEPACKAGE("cxEditorsVCLC5.bpi");
+USEPACKAGE("dclcxLibraryVCLC5.bpi");
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+//---------------------------------------------------------------------------
+
+//   Package source.
+//---------------------------------------------------------------------------
+
+#pragma argsused
+int WINAPI DllEntryPoint(HINSTANCE hinst, unsigned long reason, void*)
+{
+        return 1;
+}
+//---------------------------------------------------------------------------
