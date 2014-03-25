@@ -25,6 +25,8 @@
 #include <IBCustomDataSet.hpp>
 #include <IBDatabase.hpp>
 #include <IBQuery.hpp>
+#include "cxButtonEdit.hpp"
+#include "cxLabel.hpp"
 //---------------------------------------------------------------------------
 typedef std::map<AnsiString,TVariant> TMyFields;
 class TFReport;
@@ -41,6 +43,8 @@ __published:	// IDE-managed Components
    TfrReport *frReport1;
    TfrDBDataSet *frDBDataSet1;
    TFrameList *FrameList1;
+   TcxLabel *cxLabel3;
+   TcxButtonEdit *EditPartner;
    void __fastcall cxButton1Click(TObject &Sender);
    void __fastcall cxButton2MouseDown(TObject *Sender, TMouseButton Button,
           TShiftState Shift, int X, int Y);
@@ -53,12 +57,15 @@ __published:	// IDE-managed Components
           TObject *Sender);
    void __fastcall FormKeyDown(TObject *Sender, WORD &Key,
           TShiftState Shift);
+   void __fastcall EditPartnerPropertiesButtonClick(TObject *Sender,
+          int AButtonIndex);
 private:	// User declarations
    TFReport * Report;
    TMyFields Fields;
    AnsiString QueryStr;
    AnsiString ReportFileName;
    bool a;
+   int id_partner;
 public:		// User declarations
    __fastcall TFormReport(TComponent* Owner, TMyFields fields,
          AnsiString QueryString, AnsiString filename);

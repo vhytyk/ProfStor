@@ -4,6 +4,8 @@
 #pragma hdrstop
 
 #include "Report.h"
+#include "PartnerList.h"
+#include "Partner.h"
 #include "UUtiliteFunctions.h"
 #include "FReport.h"
 //---------------------------------------------------------------------------
@@ -21,6 +23,8 @@
 #pragma link "FR_Class"
 #pragma link "FR_DBSet"
 #pragma link "FR_DSet"
+#pragma link "cxButtonEdit"
+#pragma link "cxLabel"
 #pragma resource "*.dfm"
 TFormReport *FormReport;
 //---------------------------------------------------------------------------
@@ -28,6 +32,7 @@ __fastcall TFormReport::TFormReport(TComponent* Owner, TMyFields fields,
          AnsiString QueryString, AnsiString filename)
    : TForm(Owner)
 {
+   id_partner = -1;
    a = true;
    DateEnd->Date = Date();
    DateStart->Date = Date();
@@ -76,6 +81,10 @@ AnsiString __fastcall TFormReport::DateReplace(AnsiString str)
    result =
       StringReplace(result, "[DateEnd]",
          DateToStr(DateEnd->Date), TReplaceFlags() <<rfReplaceAll<< rfIgnoreCase);
+   AnsiString s = "";
+   result =
+      StringReplace(result, "[Pokupatel]",
+         (id_partner > 0) ? " and id_partner="+IntToStr(id_partner) : s, TReplaceFlags() <<rfReplaceAll<< rfIgnoreCase);
    return result;
 }
 //---------------------------------------------------------------------------
@@ -203,6 +212,22 @@ void __fastcall TFormReport::FormKeyDown(TObject *Sender, WORD &Key,
          FrameList1->Query->First();
       }
    }
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormReport::EditPartnerPropertiesButtonClick(
+      TObject *Sender, int AButtonIndex)
+{
+  //
+   TPartnerListForm * pf = new TPartnerListForm(this, ptPokupec);
+   pf->ShowModal();
+   if(pf->SelectedItem)
+   {
+//      Document->Partner = pf->SelectedItem;
+      EditPartner->Text = pf->SelectedItem->NamePartner;
+      id_partner = pf->SelectedItem->ID_Partner;
+   }
+   delete pf;
 }
 //---------------------------------------------------------------------------
 

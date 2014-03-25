@@ -278,23 +278,23 @@ void __fastcall TTMainForm::dxBarButton10Click(TObject *Sender)
     " (select sum(kilxkist) from prihod where id_tovar = t.id_tovar "
     "         and datadok < '[DateStart]') as ost_kilk_start_prihod,"
     " (select sum(kilxkist) from rashod where id_tovar = t.id_tovar "
-    "         and datadok < '[DateStart]') as ost_kilk_start_rashod, "
+    "         and datadok < '[DateStart]' [Pokupatel]) as ost_kilk_start_rashod, "
 
 
     " (select sum(kilxkist) from prihod where id_tovar = t.id_tovar "
     "         and datadok >= '[DateStart]' and datadok<='[DateEnd]') as prihod_kilk, "
     " (select sum(kilxkist) from rashod where id_tovar = t.id_tovar "
-    "         and datadok >= '[DateStart]' and datadok<='[DateEnd]') as rashod_kilk, "
+    "         and datadok >= '[DateStart]' and datadok<='[DateEnd]' [Pokupatel]) as rashod_kilk, "
 
 
     " (select sum(kilxkist) from prihod where id_tovar = t.id_tovar "
     "         and datadok<='[DateEnd]') ost_kilk_end_prihod, "
     " (select sum(kilxkist) from rashod where id_tovar = t.id_tovar "
-    "         and datadok<='[DateEnd]') as ost_kilk_end_rashod, "
+    "         and datadok<='[DateEnd]' [Pokupatel]) as ost_kilk_end_rashod, "
 
     " tovar.cinazakup as ser_zakup, "
     " COALESCE ( (select sum(kilxkist*cina)/sum(kilxkist) from rashod where id_tovar=t.id_tovar "
-    "   and datadok >= '[DateStart]' and datadok<='[DateEnd]' "
+    "   and datadok >= '[DateStart]' and datadok<='[DateEnd]' [Pokupatel]"
     " ), tovar.cinaprodazh) as ser_prodazh "
     " from tovar t , partner p "
     " where p.id_partner = t.id_partner";

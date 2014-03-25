@@ -71,6 +71,7 @@ __fastcall TTMainForm::TTMainForm(TComponent* Owner)
    FrameList1->GridView1->Styles->Background = style;
    Timer1->Enabled = GetSettings()->ReadBool("MainForm Options","IsRefresh", false);
    Timer1->Interval = GetSettings()->ReadInteger("MainForm Options","RefreshTime", 3)*1000;
+   Timer2Timer(this);
 }
 //---------------------------------------------------------------------------
 void __fastcall TTMainForm::ButtonInsertClick(TObject &Sender)
