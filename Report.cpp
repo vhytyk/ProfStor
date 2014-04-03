@@ -6,6 +6,8 @@
 #include "Report.h"
 #include "PartnerList.h"
 #include "Partner.h"
+#include "Groups.h"
+#include "GroupsList.h"
 #include "UUtiliteFunctions.h"
 #include "FReport.h"
 //---------------------------------------------------------------------------
@@ -29,7 +31,7 @@
 TFormReport *FormReport;
 //---------------------------------------------------------------------------
 __fastcall TFormReport::TFormReport(TComponent* Owner, TMyFields fields,
-         AnsiString QueryString, AnsiString filename)
+         AnsiString QueryString, AnsiString filename, bool hidePokupatel, bool hideDate)
    : TForm(Owner)
 {
    id_partner = -1;
@@ -45,6 +47,18 @@ __fastcall TFormReport::TFormReport(TComponent* Owner, TMyFields fields,
    FrameList1->Query->OnFilterRecord = IBQuery1FilterRecord;
    Refresh();
    FrameList1->Query->Filtered = true;
+   if(hidePokupatel){
+      EditPartner->Visible = false;
+      cxLabel3->Visible = false;
+      EditGroup->Top = EditPartner->Top;
+      EditGroup->Top = EditPartner->Top;
+      cxLabel1->Top = cxLabel3->Top;
+   }
+   if(hideDate){
+      DateStart->Visible = false;
+      DateEnd->Visible = false;
+   }
+
 //   DateEnd->Properties->OnChange = DateChange;
 //   DateStart->Properties->OnChange = DateChange;
 
@@ -85,6 +99,9 @@ AnsiString __fastcall TFormReport::DateReplace(AnsiString str)
    result =
       StringReplace(result, "[Pokupatel]",
          (id_partner > 0) ? " and id_partner="+IntToStr(id_partner) : s, TReplaceFlags() <<rfReplaceAll<< rfIgnoreCase);
+   result =
+      StringReplace(result, "[Grupa]",
+         (id_group > 0) ? " and id_group="+IntToStr(id_group) : s, TReplaceFlags() <<rfReplaceAll<< rfIgnoreCase);
    return result;
 }
 //---------------------------------------------------------------------------
@@ -128,6 +145,7 @@ void __fastcall TFormReport::cxButton2Click(TObject &Sender)
    FrameList1->Query->DisableControls();
    Report->Vars["Report.DateStart"] = DateStart->Date;
    Report->Vars["Report.DateEnd"] = DateEnd->Date;
+   Report->Vars["Grupa"] = EditGroup->Text;
    Report->FileBlank = ReportFileName;
    Report->frReport = this->frReport1;
    Report->LoadBlankFromFile();
@@ -226,8 +244,28 @@ void __fastcall TFormReport::EditPartnerPropertiesButtonClick(
 //      Document->Partner = pf->SelectedItem;
       EditPartner->Text = pf->SelectedItem->NamePartner;
       id_partner = pf->SelectedItem->ID_Partner;
+      FrameList1->Query->SQL->Text = DateReplace(QueryStr);
+      Refresh();
    }
    delete pf;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TFormReport::EditGroupPropertiesButtonClick(
+      TObject *Sender, int AButtonIndex)
+{
+   //
+   TGroupsFormList * gf = new TGroupsFormList(this, true);
+   gf->ShowModal();
+   if(gf->SelectedItem)
+   {
+//      Document->Partner = pf->SelectedItem;
+      EditGroup->Text = gf->SelectedItem->Name;
+      id_group = gf->SelectedItem->ID_Group;
+      FrameList1->Query->SQL->Text = DateReplace(QueryStr);
+      Refresh();
+   }
+   delete gf;
 }
 //---------------------------------------------------------------------------
 

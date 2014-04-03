@@ -1,30 +1,31 @@
 object TMainForm: TTMainForm
-  Left = 191
-  Top = 119
+  Left = 510
+  Top = 248
   Width = 791
   Height = 526
   Caption = #1055#1088#1086#1092'-'#1057#1082#1083#1072#1076' [by Vic]'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
-  Font.Height = -11
+  Font.Height = -14
   Font.Name = 'MS Sans Serif'
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
   OnClose = FormClose
-  PixelsPerInch = 96
-  TextHeight = 13
+  PixelsPerInch = 120
+  TextHeight = 16
   inline FrameList1: TFrameList
     Left = 0
-    Top = 46
-    Width = 775
-    Height = 412
+    Top = 55
+    Width = 773
+    Height = 389
     Align = alClient
     TabOrder = 0
     inherited cxGrid1: TcxGrid
-      Width = 775
-      Height = 387
+      Top = 31
+      Width = 773
+      Height = 358
       RootLevelOptions.DetailFrameColor = clInfoBk
       inherited GridView1: TcxGridDBTableView
         OnDblClick = ButtonModifyClick
@@ -35,14 +36,24 @@ object TMainForm: TTMainForm
       end
     end
     inherited Panel1: TPanel
-      Width = 775
+      Width = 773
+      Height = 31
       inherited ButtonInsert: TcxButton
+        Left = 4
+        Width = 29
+        Height = 27
         OnClick = ButtonInsertClick
       end
       inherited ButtonModify: TcxButton
+        Left = 38
+        Width = 30
+        Height = 27
         OnClick = ButtonModifyClick
       end
       inherited ButtonDelete: TcxButton
+        Left = 73
+        Width = 29
+        Height = 27
         Enabled = False
         OnClick = ButtonDeleteClick
       end
@@ -57,54 +68,54 @@ object TMainForm: TTMainForm
   end
   object Panel1: TPanel
     Left = 0
-    Top = 26
-    Width = 775
-    Height = 20
+    Top = 30
+    Width = 773
+    Height = 25
     Align = alTop
     BevelOuter = bvNone
     TabOrder = 1
     Visible = False
     DesignSize = (
-      775
-      20)
+      773
+      25)
     object EditPokupci: TcxComboBox
-      Left = 632
+      Left = 778
       Top = 0
-      Width = 151
-      Height = 21
+      Width = 186
+      Height = 24
       Anchors = [akTop, akRight, akBottom]
       Properties.DropDownListStyle = lsFixedList
       Properties.OnCloseUp = EditPokupciPropertiesCloseUp
       TabOrder = 0
     end
     object EditPokupciID: TcxComboBox
-      Left = 475
+      Left = 585
       Top = 0
-      Width = 57
-      Height = 21
+      Width = 70
+      Height = 24
       TabOrder = 1
       Visible = False
     end
   end
   object Panel2: TPanel
     Left = 0
-    Top = 458
-    Width = 775
-    Height = 29
+    Top = 444
+    Width = 773
+    Height = 35
     Align = alBottom
     Color = 13160660
     TabOrder = 6
     object Label1: TLabel
       Left = 1
       Top = 1
-      Width = 773
-      Height = 25
+      Width = 771
+      Height = 33
       Align = alTop
       Caption = 'Label1'
       Color = clBtnFace
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clTeal
-      Font.Height = -21
+      Font.Height = -27
       Font.Name = 'Tahoma'
       Font.Style = [fsBold]
       ParentColor = False
@@ -115,7 +126,7 @@ object TMainForm: TTMainForm
     AutoDockColor = False
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
-    Font.Height = -12
+    Font.Height = -15
     Font.Name = 'Segoe UI'
     Font.Style = []
     Bars = <
@@ -181,7 +192,7 @@ object TMainForm: TTMainForm
     DockControlHeights = (
       0
       0
-      26
+      30
       0)
     object BarButtonDocs: TdxBarButton
       Caption = #1044#1086#1082#1091#1084#1077#1085#1090#1099
@@ -304,6 +315,10 @@ object TMainForm: TTMainForm
         end
         item
           Item = dxBarSubItem17
+          Visible = True
+        end
+        item
+          Item = dxBarButton26
           Visible = True
         end>
     end
@@ -700,6 +715,20 @@ object TMainForm: TTMainForm
       Visible = ivAlways
       ImageIndex = 25
       OnClick = buttonGroupsClick
+    end
+    object itemPriceList: TdxBarSubItem
+      Caption = #1055#1088#1072#1081#1089' '#1083#1080#1089#1090
+      Category = 0
+      Visible = ivAlways
+      OnClick = itemPriceListClick
+      ItemLinks = <>
+    end
+    object dxBarButton26: TdxBarButton
+      Caption = #1055#1088#1072#1081#1089' '#1083#1080#1089#1090
+      Category = 0
+      Hint = #1055#1088#1072#1081#1089' '#1083#1080#1089#1090
+      Visible = ivAlways
+      OnClick = itemPriceListClick
     end
   end
   object Timer1: TTimer
@@ -2441,8 +2470,12 @@ object TMainForm: TTMainForm
     Left = 352
     Top = 128
   end
-  object frDesigner1: TfrDesigner
-    Left = 384
-    Top = 232
+  object frReport1: TfrReport
+    InitialZoom = pzDefault
+    PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
+    RebuildPrinter = False
+    Left = 288
+    Top = 160
+    ReportForm = {19000000}
   end
 end

@@ -10,7 +10,7 @@
       DocPrihod.obj Document.obj Nakladna.obj AktPrihod.obj NakladnaList.obj 
       AktPrihodList.obj Kassa.obj KassaPrihod.obj KassaRashod.obj Options.obj 
       SumaPropysom.obj Report.obj FReport.obj KassaList.obj Groups.obj 
-      GroupsList.obj"/>
+      GroupsList.obj PriceList.obj"/>
     <RESFILES value="ProfStor.res"/>
     <IDLFILES value=""/>
     <IDLGENFILES value=""/>
@@ -18,7 +18,8 @@
     <RESDEPEN value="$(RESFILES) MainForm.dfm TovarList.dfm UFrameList.dfm TModifyTovarForm.dfm 
       PartnerList.dfm ModifyPartnerForm.dfm Document.dfm Nakladna.dfm 
       AktPrihod.dfm NakladnaList.dfm AktPrihodList.dfm KassaPrihod.dfm 
-      KassaRashod.dfm Options.dfm Report.dfm KassaList.dfm GroupsList.dfm"/>
+      KassaRashod.dfm Options.dfm Report.dfm KassaList.dfm GroupsList.dfm 
+      PriceList.dfm"/>
     <LIBFILES value=""/>
     <LIBRARIES value="vcldbx.lib tee.lib fr6.lib vclx.lib cxExtEditorsVCLC6.lib dxComnC6.lib 
       dxBarC6.lib cxExportVCLC6.lib cxGridVCLC6.lib cxDataC6.lib 
@@ -35,7 +36,7 @@
       dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
       inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
       bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
-      indy.bpi bcb2kaxserver.bpi"/>
+      indy.bpi bcb2kaxserver.bpi fr6.bpi"/>
     <PATHCPP value=".;"/>
     <PATHPAS value=".;"/>
     <PATHRC value=".;"/>
@@ -100,6 +101,7 @@
       <FILE FILENAME="KassaList.cpp" FORMNAME="KassaFormList" UNITNAME="KassaList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="Groups.cpp" FORMNAME="" UNITNAME="Groups" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
       <FILE FILENAME="GroupsList.cpp" FORMNAME="GroupsFormList" UNITNAME="GroupsList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="PriceList.cpp" FORMNAME="PriceListForm" UNITNAME="PriceList" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
   </FILELIST>
   <BUILDTOOLS>
   </BUILDTOOLS>

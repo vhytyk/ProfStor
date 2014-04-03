@@ -22,6 +22,7 @@ USEFORM("Options.cpp", OptionsForm);
 USEFORM("Report.cpp", FormReport);
 USEFORM("KassaList.cpp", KassaFormList);
 USEFORM("GroupsList.cpp", GroupsFormList);
+USEFORM("PriceList.cpp", PriceListForm);
 //---------------------------------------------------------------------------
 WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
 {
@@ -63,6 +64,7 @@ WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
            Application->Title = "Проф-Склад [by Vic]";
            Application->CreateForm(__classid(TTMainForm), &TMainForm);
        Application->CreateForm(__classid(TGroupsFormList), &GroupsFormList);
+       Application->CreateForm(__classid(TPriceListForm), &PriceListForm);
        Application->Run();
         }
         catch (Exception &exception)

@@ -42,6 +42,7 @@
 #pragma link "cxGridCustomTableView"
 #pragma link "cxGridDBTableView"
 #pragma link "cxGridTableView"
+#pragma link "FR_Class"
 #pragma resource "*.dfm"
 TTMainForm *TMainForm;
 //---------------------------------------------------------------------------
@@ -62,7 +63,7 @@ __fastcall TTMainForm::TTMainForm(TComponent* Owner)
    }
 
    /*Settings*/
-   if(GetSettings()->ReadBool("MainForm Options","IsWindowStateMaximize", true))
+   if(GetSettings()->ReadBool("MainForm Options","IsWindowStateMaximize", false))
       this->WindowState = wsMaximized;
    this->FrameList1->GridView1->OptionsView->GroupByBox = GetSettings()->ReadBool("MainForm Options","GroupPanelVisibility", true);
    FrameList1->Panel1->Color = (TColor)GetSettings()->ReadInteger("MainForm Options","MainFormColor", clBtnFace);
@@ -505,4 +506,22 @@ void __fastcall TTMainForm::buttonGroupsClick(TObject *Sender)
    new TGroupsFormList(this)->ShowModal();
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TTMainForm::itemPriceListClick(TObject *Sender)
+{
+ AnsiString  query =
+    " select tovar.id_tovar, tovar.nametovar, tovar.cinaprodazh from tovar where 1=1 [Grupa] [Pokupatel]";
+
+
+   TMyFields fields;
+   fields["ID_TOVAR"] = "Код";
+   fields["NAMETOVAR"] = "Товар";
+   fields["CINAPRODAZH"] = "Ціна";
+   TFormReport * fr = new TFormReport(this, fields, query, "price.frf", true, true);
+   fr->Caption = "Прайс-лист";
+   fr->ShowModal();
+   delete fr;
+}
+//---------------------------------------------------------------------------
+
 

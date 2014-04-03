@@ -40,11 +40,13 @@ __published:	// IDE-managed Components
    TcxButton *cxButton1;
    TcxButton *cxButton2;
    TcxButton *cxButton3;
-   TfrReport *frReport1;
-   TfrDBDataSet *frDBDataSet1;
    TFrameList *FrameList1;
    TcxLabel *cxLabel3;
    TcxButtonEdit *EditPartner;
+   TcxButtonEdit *EditGroup;
+   TcxLabel *cxLabel1;
+   TfrReport *frReport1;
+   TfrDBDataSet *frDBDataSet1;
    void __fastcall cxButton1Click(TObject &Sender);
    void __fastcall cxButton2MouseDown(TObject *Sender, TMouseButton Button,
           TShiftState Shift, int X, int Y);
@@ -59,6 +61,8 @@ __published:	// IDE-managed Components
           TShiftState Shift);
    void __fastcall EditPartnerPropertiesButtonClick(TObject *Sender,
           int AButtonIndex);
+   void __fastcall EditGroupPropertiesButtonClick(TObject *Sender,
+          int AButtonIndex);
 private:	// User declarations
    TFReport * Report;
    TMyFields Fields;
@@ -66,9 +70,10 @@ private:	// User declarations
    AnsiString ReportFileName;
    bool a;
    int id_partner;
+   int id_group;
 public:		// User declarations
    __fastcall TFormReport(TComponent* Owner, TMyFields fields,
-         AnsiString QueryString, AnsiString filename);
+         AnsiString QueryString, AnsiString filename, bool hidePokupatel = false, bool hideDate = false);
    void __fastcall Refresh();
    AnsiString __fastcall DateReplace(AnsiString str);
 };

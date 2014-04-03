@@ -140,19 +140,42 @@ object FormReport: TFormReport
       end
     end
   end
+  object EditGroup: TcxButtonEdit
+    Left = 510
+    Top = 41
+    Width = 188
+    Height = 24
+    Properties.Buttons = <
+      item
+        Default = True
+        Kind = bkEllipsis
+      end>
+    Properties.ReadOnly = True
+    Properties.OnButtonClick = EditGroupPropertiesButtonClick
+    Style.ButtonTransparency = ebtNone
+    TabOrder = 3
+  end
+  object cxLabel1: TcxLabel
+    Left = 412
+    Top = 42
+    Width = 87
+    Height = 20
+    TabOrder = 4
+    Caption = #1043#1088#1091#1087#1087#1072
+  end
   object frReport1: TfrReport
     Dataset = frDBDataSet1
     InitialZoom = pzDefault
     PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
     RebuildPrinter = False
     OnGetValue = frReport1GetValue
-    Left = 184
-    Top = 8
+    Left = 272
+    Top = 96
     ReportForm = {19000000}
   end
   object frDBDataSet1: TfrDBDataSet
     DataSource = FrameList1.DataSource1
-    Left = 152
-    Top = 8
+    Left = 344
+    Top = 136
   end
 end

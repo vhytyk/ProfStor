@@ -36,6 +36,8 @@
 #include "cxGridCustomTableView.hpp"
 #include "cxGridDBTableView.hpp"
 #include "cxGridTableView.hpp"
+#include "PriceList.h"
+#include "FR_Class.hpp"
 //---------------------------------------------------------------------------
 class TTMainForm : public TForm
 {
@@ -105,9 +107,11 @@ __published:	// IDE-managed Components
    TLabel *Label1;
    TTimer *Timer2;
    TdxBarButton *dxBarButton25;
-        TfrDesigner *frDesigner1;
         TdxBarSubItem *dxBarSubItem20;
         TdxBarButton *buttonGroups;
+   TdxBarSubItem *itemPriceList;
+   TdxBarButton *dxBarButton26;
+   TfrReport *frReport1;
    void __fastcall ButtonInsertClick(TObject &Sender);
    void __fastcall ButtonModifyClick(TObject &Sender);
    void __fastcall ButtonDeleteClick(TObject &Sender);
@@ -134,6 +138,7 @@ __published:	// IDE-managed Components
    void __fastcall Timer2Timer(TObject *Sender);
    void __fastcall dxBarButton25Click(TObject *Sender);
    void __fastcall buttonGroupsClick(TObject *Sender);
+   void __fastcall itemPriceListClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
         __fastcall TTMainForm(TComponent* Owner);
