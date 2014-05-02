@@ -237,7 +237,7 @@ void __fastcall TFormReport::EditPartnerPropertiesButtonClick(
       TObject *Sender, int AButtonIndex)
 {
   //
-   TPartnerListForm * pf = new TPartnerListForm(this, ptPokupec);
+   TPartnerListForm * pf = new TPartnerListForm(this);
    pf->ShowModal();
    if(pf->SelectedItem)
    {

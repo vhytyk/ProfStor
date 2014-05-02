@@ -53,7 +53,7 @@ __fastcall TNakladnaForm::TNakladnaForm(TComponent* Owner, TDocRashod * doc)
          "select r.id_rashod, r.id_tovar,t.kod, t.nametovar,r.kilxkist, t.cinaprodazh, r.cina "
          " from Tovar t, Rashod r "
          " where r.nomer = "+IntToStr(Document->Nomer)+
-         " and r.id_tovar = t.id_tovar"
+         " and r.id_tovar = t.id_tovar order by r.id_rashod"
          ,true);
    FrameList1->Query->Name = "NakDS";
    TRashod * r = new TRashod(FrameList1->Query->FieldByName("id_rashod")->AsInteger);
